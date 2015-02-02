@@ -16,9 +16,8 @@ $ git clone git@github.com:TMBR/redirect-tester.git
 
 ## Usage
 
-- Place the redirect request URIs with its expected redirect location in the array inside the `redirects.js` test file
+- Modify the `redirect-uris.json` file with the request URIs and their expected redirect locations
 - save file and exit
-- go up one level, so you're one level above the `test` folder
 - type `mocha`
 - watch the tests run
 
