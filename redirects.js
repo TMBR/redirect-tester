@@ -6,7 +6,7 @@ describe('Redirects', function(){
   var urls = [
     {
       from: 'http://brainfarmcinema.com/blog/tag/video/page/2',
-      to: 'http://brainfarmcinema.com/tag/video'
+      to: 'http://4brainfarmcinema.com/tag/video'
     },
     {
       from: 'http://brainfarmcinema.com/who_we_are.aspx',
@@ -53,6 +53,7 @@ describe('Redirects', function(){
 
 function setupNewTest(from, to, delay) {
   describe('From: ' + from + ' To: ' + to, function(){
+    this.timeout(0); // no mocha timeout -- we'll rely on http request timeout
     var redirectTo = null, code = null;
     before(function(done){
       setTimeout(function(done){
