@@ -1,46 +1,9 @@
 var assert = require('assert'),
-  http = require('http');
+  http = require('http'),
+  urls = require('../redirect-uris.json');
 
 var delayPerRequest = 1000;
 describe('Redirects', function(){
-  var urls = [
-    {
-      from: 'http://brainfarmcinema.com/blog/tag/video/page/2',
-      to: 'http://4brainfarmcinema.com/tag/video'
-    },
-    {
-      from: 'http://brainfarmcinema.com/who_we_are.aspx',
-      to: 'http://brainfarmcinema.com/who-we-are/'
-    },
-    {
-      'from': 'http://brainfarm.wpengine.com/',
-      'to': 'http://brainfarmcinema.com/'
-    },
-    {
-      'from': 'http://brainfarm.wpengine.com',
-      'to': 'http://brainfarmcinema.com/'
-    },
-    {
-      from: 'http://brainfarmcinema.com/blog/index.php/category/video/',
-      to: 'http://brainfarmcinema.com/category/video'
-    },
-    {
-      from: 'http://brainfarmcinema.com/blog/index.php/category/video/page/3',
-      to: 'http://brainfarmcinema.com/category/video'
-    },
-    {
-      from: 'http://brainfarmcinema.com/blog/category/video/',
-      to: 'http://brainfarmcinema.com/category/video'
-    },
-    {
-      from: 'http://brainfarmcinema.com/blog/index.php/tag/video/',
-      to: 'http://brainfarmcinema.com/tag/video'
-    },
-    {
-      from: 'http://brainfarmcinema.com/blog/tag/video/',
-      to: 'http://brainfarmcinema.com/tag/video'
-    }
-  ];
   for (var i = 0; i < urls.length; i++) {
     var from = urls[i].from,
         to = urls[i].to;
