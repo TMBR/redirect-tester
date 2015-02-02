@@ -11,14 +11,14 @@ Simple tool that takes a list of request URIs and expected redirect locations an
 
 ```
 $ npm install -g mocha
-$ git clone git@github.com:TMBR/redirect-tester.git test
+$ git clone git@github.com:TMBR/redirect-tester.git
 ```
 
 ## Usage
 
-- Place the redirect request URIs with its expected redirect location in the array inside the redirect.js test file
+- Place the redirect request URIs with its expected redirect location in the array inside the `redirects.js` test file
 - save file and exit
 - go up one level, so you're one level above the `test` folder
-- type `mocha` 
+- type `mocha`
 - watch the tests run
 
