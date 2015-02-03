@@ -2,7 +2,7 @@ var assert = require('assert'),
   http = require('http'),
   urls = require('../redirect-uris.json');
 
-var delayPerRequest = 1000;
+var delayPerRequest = 500;
 describe('Redirects', function(){
   for (var i = 0; i < urls.length; i++) {
     var from = urls[i].from,
